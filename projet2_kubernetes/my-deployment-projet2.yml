@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-projet2-kuber-deployment
+  labels:
+    app: my-projet2-kuber
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-projet2-kuber
+  template:
+    metadata:
+      labels:
+        app: my-projet2-kuber
+    spec:
+      containers:
+      - name: my-projet2-api
+        image: cbredel/cb_projet2
+        ports:
+        - containerPort: 8000
+    
