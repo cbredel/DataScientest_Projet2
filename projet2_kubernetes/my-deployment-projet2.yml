@@ -19,4 +19,6 @@ spec:
         image: cbredel/cb_projet2
         ports:
         - containerPort: 8000
-    
+      - name: my-projet2-test
+        image: cbredel/cb_projet2_test
+  
